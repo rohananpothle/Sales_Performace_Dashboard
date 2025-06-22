@@ -98,6 +98,40 @@ This dashboard helps stakeholders:
                     "WeekEnd", [Date] + (7 - WEEKDAY([Date], 2)),
                     "YearWeekNum", YEAR([Date]) * 100 + WEEKNUM ( [Date], 2 )
                 )
+   
+   🌍 RegionTable – DAX Static Table for Region Mapping with Manager Emails
+
+        RegionTable =
+        DATATABLE (
+            "Country", STRING,
+            "Region", STRING,
+            "Manager Email", STRING,
+            {
+                { "USA", "North America", "na.manager@company.com" },
+                { "Mexico", "North America", "na.manager@company.com" },
+                { "Canada", "North America", "na.manager@company.com" },
+                { "Brazil", "South America", "sa.manager@company.com" },
+                { "Venezuela", "South America", "sa.manager@company.com" },
+                { "Argentina", "South America", "sa.manager@company.com" },
+                { "Germany", "Europe", "eu.manager@company.com" },
+                { "France", "Europe", "eu.manager@company.com" },
+                { "UK", "Europe", "eu.manager@company.com" },
+                { "Spain", "Europe", "eu.manager@company.com" },
+                { "Italy", "Europe", "eu.manager@company.com" },
+                { "Switzerland", "Europe", "eu.manager@company.com" },
+                { "Sweden", "Europe", "eu.manager@company.com" },
+                { "Portugal", "Europe", "eu.manager@company.com" },
+                { "Denmark", "Europe", "eu.manager@company.com" },
+                { "Austria", "Europe", "eu.manager@company.com" },
+                { "Finland", "Europe", "eu.manager@company.com" },
+                { "Belgium", "Europe", "eu.manager@company.com" },
+                { "Poland", "Europe", "eu.manager@company.com" },
+                { "Norway", "Europe", "eu.manager@company.com" },
+                { "Ireland", "Europe", "eu.manager@company.com" }
+            }
+        )
+
+
 
     Total Sales Revenue = SUM(Sales[Total Sales])
 
@@ -318,7 +352,7 @@ QoQ Growth Arrow
 
 4. Data Modeling (Star Schema)
 
-   ![image](https://github.com/user-attachments/assets/3f73a3aa-b8e4-449a-8cb7-aa0662cd57e6)
+   ![image](https://github.com/user-attachments/assets/e5198931-ddc1-4195-a640-d12327373457)
 
 6. Excel/CSV (Source Data)
 
